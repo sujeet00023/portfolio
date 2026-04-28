@@ -4,7 +4,7 @@ import { useReveal } from "./useReveal";
 const facts = [
   { icon: "🏙️", label: "Location", value: "Pune, Maharashtra" },
   { icon: "💼", label: "Role", value: "Full Stack Developer" },
-  { icon: "🎓", label: "Degree", value: "MCA — Trinity Academy" },
+  { icon: "🎓", label: "Degree", value: "MCA — Trinity Academy Of Engineering" },
   { icon: "📧", label: "Email", value: "sujeetkhupase196@gmail.com" },
 ];
 
@@ -24,23 +24,23 @@ export default function About() {
             </div>
 
             <h2 className="reveal delay-100 font-display text-4xl sm:text-5xl font-bold text-text mb-6">
-              Building the web,{" "}
-              <span className="text-accent">one pixel</span> at a time.
+              I build <span className="text-accent">scalable products</span> that solve real business problems.
             </h2>
 
             <p className="reveal delay-200 text-text-muted font-body text-base leading-relaxed mb-6">
-              I&apos;m a passionate Full Stack Developer based in Pune, with 1.5+ years of hands-on experience
-              turning ideas into production-grade applications. I specialize in React.js, Node.js, and TypeScript —
-              the full spectrum from responsive UIs to robust RESTful APIs.
+             I’m a Full Stack Developer with 1.5+ years of experience building real-world, <span className="text-accent">production-grade applications</span> 
+             I work across the stack using React, Next.js, Node.js, and TypeScript turning ideas into fast, reliable, and user-friendly products.
             </p>
 
             <p className="reveal delay-300 text-text-muted font-body text-base leading-relaxed mb-10">
-              Currently at <span className="text-text font-medium">Europass Immigration</span>, I&apos;ve built a
-              full-stack CRM system, automated business workflows, and shipped a company-facing web platform
-              with OTP authentication and email automation. I thrive at the intersection of clean design and
-              performant engineering.
+             At Europass Immigration, I’ve developed a full-stack <span className="text-accent">CRM system</span>, automated business workflows, and built a company-facing platform with secure authentication and real-time features. 
+             My focus is not just on writing code, but on building systems that are scalable, maintainable, and solve actual user problems.
             </p>
-
+            
+            <p className="reveal delay-300 text-text-muted font-body text-base leading-relaxed mb-10">
+              I enjoy working at the intersection of clean UI and solid backend architecture — designing intuitive interfaces while ensuring the underlying systems are efficient and robust. 
+              Currently, I’m exploring ways to build better SaaS products and improve performance in modern web applications.
+          </p>
             <div className="reveal delay-400 flex flex-wrap gap-3">
               <a
                 href="https://linkedin.com/in/sujeet-khupase-374a84163"

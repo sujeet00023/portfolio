@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-export function useReveal() {
+export function useReveal(dep?: any) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -19,13 +19,15 @@ export function useReveal() {
       { threshold: 0.1 }
     );
 
-    // Observe element and all .reveal children
     const reveals = el.querySelectorAll(".reveal");
-    reveals.forEach((r) => observer.observe(r));
-    if (el.classList.contains("reveal")) observer.observe(el);
+
+    reveals.forEach((r) => {
+      r.classList.remove("visible"); // 🔥 RESET BEFORE OBSERVE
+      observer.observe(r);
+    });
 
     return () => observer.disconnect();
-  }, []);
+  }, [dep]); // 👈 IMPORTANT
 
   return ref;
 }
