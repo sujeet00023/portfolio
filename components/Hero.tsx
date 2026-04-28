@@ -129,9 +129,11 @@ export default function Hero() {
 
         {/* Main heading */}
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-6">
-          <span className="block text-text">Hi, I&apos;m</span>
-          <span className="block shimmer-text mt-2">Sujeet</span>
-          <span className="block text-text">Khupase</span>
+         <span className="block text-text">Hi, I’m</span>
+<span className="block shimmer-text mt-2">Sujeet Khupase</span>
+<span className="block text-text text-2xl sm:text-3xl mt-2">
+  I build scalable web applications
+</span>
         </h1>
 
         {/* Typewriter */}
@@ -173,6 +175,7 @@ export default function Hero() {
           {[
             { num: "1.5+", label: "Years Exp." },
             { num: "5+", label: "Projects" },
+            { num: "1+", label: "CRM Systems Built" },
             { num: "10+", label: "Technologies" },
           ].map((s) => (
             <div key={s.label} className="text-center">

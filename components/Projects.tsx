@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useReveal } from "./useReveal";
 
 const projects = [
   {
-    title: "Custom CRM System",
+    title: "Custom CRM System (Europass)",
     subtitle: "Europass Immigration",
     description:
       "A full-featured CRM built to manage client workflows at Europass Immigration. Includes authentication, REST APIs, automation features, and an intuitive dashboard for tracking client data and business processes.",
@@ -25,6 +25,20 @@ const projects = [
     type: "Professional",
     featured: true,
   },
+
+  {
+  title: "NexGen CRM (Multi-Tenant SaaS)",
+  subtitle: "Personal Project",
+  description:
+    "A scalable multi-tenant SaaS CRM platform built to manage organizations with complete data isolation. Implemented Role-Based Access Control (Owner, Admin, Member, Viewer), secure JWT authentication using httpOnly cookies, and an audit logging system to track user actions. Designed for scalability, security, and real-world business workflows.",
+  tech: ["Next.js", "React.js", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS"],
+  color: "#00c2ff",
+  emoji: "🚀",
+  type: "Professional",
+  featured: true,
+  link: "https://next-gen-crm-nine.vercel.app",
+  github: "https://github.com/sujeet00023/..."
+},
   {
     title: "Online Book Store",
     subtitle: "Academic Project",
@@ -36,7 +50,7 @@ const projects = [
     type: "Academic",
     featured: false,
   },
-  {
+  /* {
     title: "Grocery Store E-Commerce",
     subtitle: "Academic Project",
     description:
@@ -46,7 +60,7 @@ const projects = [
     emoji: "🛒",
     type: "Academic",
     featured: false,
-  },
+  }, */
   {
     title: "Hospital Management Portal",
     subtitle: "Academic Project",
@@ -57,14 +71,25 @@ const projects = [
     emoji: "🏥",
     type: "Academic",
     featured: false,
+    
   },
 ];
 
+
+
 export default function Projects() {
-  const ref = useReveal();
   const [filter, setFilter] = useState<"All" | "Professional" | "Academic">("All");
 
   const filtered = projects.filter((p) => filter === "All" || p.type === filter);
+const ref = useReveal(filter);
+
+/* useEffect(() => {
+  const elements = document.querySelectorAll(".reveal");
+
+  elements.forEach((el) => {
+    el.classList.add("active"); // or your animation trigger
+  });
+}, [filter]); */
 
   return (
     <section id="projects" className="py-24 sm:py-32 border-t border-[#1e1e2e]" ref={ref}>
@@ -105,8 +130,8 @@ export default function Projects() {
             .filter((p) => p.featured)
             .map((project, i) => (
               <div
-                key={project.title}
-                className={`reveal delay-${(i + 1) * 100} card-hover group relative bg-[#111118] border border-[#1e1e2e] rounded-2xl p-8 overflow-hidden hover:border-[${project.color}]/30 transition-all`}
+                key={project.title + filter}
+                className={`reveal delay-${(i + 1) * 100} card-hover group relative bg-[#111118] border border-[#1e1e2e] rounded-2xl p-8 overflow-hidden hover:border-accent/30 transition-all`}
               >
                 {/* Background glow */}
                 <div
@@ -139,6 +164,29 @@ export default function Projects() {
                     {project.description}
                   </p>
 
+                  <div className="flex gap-3 mb-6">
+  {project.link && (
+    <a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-xs font-mono px-3 py-1 rounded-lg border border-[#1e1e2e] text-accent hover:border-accent transition"
+    >
+      🔗 Live
+    </a>
+  )}
+  {project.github && (
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-xs font-mono px-3 py-1 rounded-lg border border-[#1e1e2e] text-text-muted hover:text-accent hover:border-accent transition"
+    >
+      💻 Code
+    </a>
+  )}
+</div>
+
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((t) => (
                       <span
@@ -161,7 +209,7 @@ export default function Projects() {
             .filter((p) => !p.featured)
             .map((project, i) => (
               <div
-                key={project.title}
+               key={project.title + filter}
                 className={`reveal delay-${(i + 1) * 100} card-hover group bg-[#111118] border border-[#1e1e2e] rounded-2xl p-6 overflow-hidden relative hover:border-accent/20 transition-all`}
               >
                 <div

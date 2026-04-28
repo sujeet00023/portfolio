@@ -19,9 +19,7 @@ export default function Footer() {
 
           {/* Center */}
           <p className="text-xs font-mono text-text-muted text-center">
-            © {year} Sujeet Khupase · Built with{" "}
-            <span className="text-accent">Next.js</span> &{" "}
-            <span className="text-accent-2">Tailwind CSS</span>
+            © {year} Sujeet Khupase
           </p>
 
           {/* Socials */}
