@@ -11,6 +11,20 @@ function useMounted() {
 
 const projects = [
   {
+    title: "ShopSphere",
+    subtitle: "Multi-Vendor E-Commerce Platform",
+    description:
+      "Full-stack multi-vendor e-commerce platform with Customer, Seller, and Admin dashboards. Features product management, order tracking, wishlist, cart, checkout, Stripe payment integration, role-based access control, JWT auth, and PostgreSQL database with Prisma ORM.",
+    tech: ["Next.js", "React.js", "Node.js", "Express", "PostgreSQL", "Prisma ORM", "Stripe", "Zustand", "Tailwind CSS"],
+    color: "#10b981",
+    accentLight: "#d1fae5",
+    emoji: "🛍️",
+    type: "Personal",
+    tier: "flagship",
+    link: "https://shop-sphere-khaki.vercel.app",
+    github: "https://github.com/sujeet00023/ShopSphere",
+  },
+  {
     title: "CollabBoard",
     subtitle: "Real-Time Collaboration Tool",
     description:
