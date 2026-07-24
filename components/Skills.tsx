@@ -34,7 +34,9 @@ const categories = [
     color: "#43e97b",
     skills: [
       { name: "MySQL", level: 80 },
-      { name: "MongoDB", level: 55 },
+      { name: "MongoDB", level: 60 },
+      { name: "Docker", level: 45 },
+      { name: "PostgreSQL", level: 60 },
       { name: "AWS S3", level: 50 },
       { name: "AWS Lambda", level: 45 },
       { name: "Git", level: 88 },
