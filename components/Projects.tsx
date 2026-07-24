@@ -62,7 +62,7 @@ const projects = [
     accentLight: "#e0f7ff",
     emoji: "🚀",
     type: "Personal",
-    tier: "featured",
+    tier: "flagship",
     link: "https://next-gen-crm-nine.vercel.app",
     github: "https://github.com/sujeet00023/Next-gen-CRM",
   },
@@ -495,7 +495,7 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* ── Flagship: 2-col hero grid ── */}
+        {/* ── Flagship: 2x2 grid (4 cards) ── */}
         {flagship.length > 0 && (
           <div className="grid lg:grid-cols-2 gap-4 mb-4">
             {flagship.map((p, i) => (
